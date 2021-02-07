@@ -32,25 +32,12 @@ export default (state: types.IState = initialState, action: types.IAction): type
             };
             return check;
         }
-        // case types.ACTION_TYPE.REMOVE_TODO: {
-        //     console.log('remove');
-
-        //     const remove = {
-        //         ...state,
-        //         todoList: (payload as types.ITodo[]).filter((todo) => {
-        //             return todo.completed === false;
-        //         }),
-        //     };
-        //     return remove;
-        // }
         case types.ACTION_TYPE.REMOVE_TODO_SAGA: {
             const sagaRemove = {
                 ...state,
                 todoList: [...(payload as types.ITodo[])]
             };
-            console.log('异步调用');
-            console.log(sagaRemove);
-
+            console.log('REMOVE_TODO_SAGA');
             return sagaRemove
         }
         case types.ACTION_TYPE.UPDATE_TODO: {
@@ -65,14 +52,10 @@ export default (state: types.IState = initialState, action: types.IAction): type
                         : todo;
                 }),
             };
-            console.log('update');
-            console.log(update);
-
             return update;
         }
         default: {
             console.log('default');
-
             return state;
         }
     }

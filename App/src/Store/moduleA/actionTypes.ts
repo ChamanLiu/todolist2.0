@@ -1,3 +1,5 @@
+import { types } from "@babel/core";
+
 export interface ITodo {
     id: number;
     content: string;
@@ -13,7 +15,7 @@ export interface IAction {
 export enum ACTION_TYPE {
     ADD_TODO = 'addTodo',
     REMOVE_TODO = 'removeTodo',
-    REMOVE_TODO_SAGA = 'removeTodo',
+    REMOVE_TODO_SAGA = 'removeTodo_saga',
     TOGGLE_TODO = 'toggleTodo',
     INIT_TODOLIST = 'initTodo',
     CHECK_TODO = 'checkTodo',

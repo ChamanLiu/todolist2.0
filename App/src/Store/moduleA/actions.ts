@@ -12,8 +12,6 @@ export const checkItem = (payload: types.PadloadUnite): types.IAction => {
     };
 };
 export const removeItem = (payload: types.PadloadUnite): types.IAction => {
-    console.log('nosaga');
-
     return {
         type: types.ACTION_TYPE.REMOVE_TODO,
         payload: payload,
@@ -26,8 +24,6 @@ export const updateItem = (payload: types.PadloadUnite): types.IAction => {
     };
 };
 export const removeItemSaga = (payload: types.PadloadUnite): types.IAction => {
-    console.log('saggas');
-
     return {
         type: types.ACTION_TYPE.REMOVE_TODO_SAGA,
         payload: payload,
