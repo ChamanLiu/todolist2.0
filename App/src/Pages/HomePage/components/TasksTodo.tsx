@@ -45,7 +45,7 @@ const TasksTodo = (): JSX.Element => {
 
     }
     const handleRemoveItem = () => {
-
+        //dipatch(action) REMOVE_TODO  click '移除'<button> call handleRemoveItem
         return dispatch(actions.removeItem(myState.todoList))
 
     }

@@ -30,7 +30,7 @@ const ItemTodo = ({ todo }: Iprops): JSX.Element => {
     /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
     /************* This section will include this component general function *************/
     const handleChangeStatus = () => {
-        dispatch(actions.checkItem(todo.id))
+        dispatch(actions.checkItem(todo))
     }
     const handleUpdateItem = (e: React.ChangeEvent<HTMLInputElement>) => {
         const val: string = e.target.value
@@ -43,7 +43,7 @@ const ItemTodo = ({ todo }: Iprops): JSX.Element => {
     /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
     return (
         <Row>
-            <div className='todolist_header' style={{ marginTop: '10px' }}>
+            <div className='todolist_body' style={{ marginTop: '10px' }}>
                 <input type="checkbox" checked={todo.completed} onChange={() => { handleChangeStatus() }} />
                 <input type="text" value={todo.content} onChange={(e) => { handleUpdateItem(e) }} style={{
                     marginLeft: '5px', width: '180px', borderColor: 'transparent'

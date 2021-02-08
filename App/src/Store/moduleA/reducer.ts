@@ -3,7 +3,7 @@ import * as types from './actionTypes';
 const initialState: types.IState = {
     todoList: [],
 };
-export default (state: types.IState = initialState, action: types.IAction): types.IState => {
+export default (state: types.IState = initialState, action: types.MoudleAActionTypes): types.IState => {
     const { type, payload } = action;
     switch (type) {
         case types.ACTION_TYPE.ADD_TODO: {
@@ -22,7 +22,7 @@ export default (state: types.IState = initialState, action: types.IAction): type
             const check = {
                 ...state,
                 todoList: state.todoList.map((todo) => {
-                    return todo.id === payload
+                    return todo.id === (payload as types.ITodo).id
                         ? {
                             ...todo,
                             completed: !todo.completed,
