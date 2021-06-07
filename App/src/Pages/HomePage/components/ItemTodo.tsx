@@ -31,7 +31,7 @@ const ItemTodo = ({ todo }: Iprops): JSX.Element => {
     /************* This section will include this component general function *************/
     const handleChangeStatus = () => {
         dispatch(actions.checkItem(todo))
-        console.log('123');
+        console.log('123testone');
     }
     const handleUpdateItem = (e: React.ChangeEvent<HTMLInputElement>) => {
         const val: string = e.target.value
