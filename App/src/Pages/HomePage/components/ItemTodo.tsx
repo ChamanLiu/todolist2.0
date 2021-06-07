@@ -32,6 +32,8 @@ const ItemTodo = ({ todo }: Iprops): JSX.Element => {
     const handleChangeStatus = () => {
         dispatch(actions.checkItem(todo))
         console.log('123');
+        console.log('4544646');
+        
     }
     const handleUpdateItem = (e: React.ChangeEvent<HTMLInputElement>) => {
         const val: string = e.target.value
