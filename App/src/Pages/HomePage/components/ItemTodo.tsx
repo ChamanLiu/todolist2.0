@@ -20,6 +20,7 @@ interface Iprops {
 /* <------------------------------------ **** INTERFACE END **** ------------------------------------ */
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
 const ItemTodo = ({ todo }: Iprops): JSX.Element => {
+    //development
     /* <------------------------------------ **** HOOKS START **** ------------------------------------ */
     /************* This section will include this component HOOK function *************/
     const dispatch = useDispatch()
