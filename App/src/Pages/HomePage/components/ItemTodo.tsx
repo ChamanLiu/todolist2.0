@@ -39,6 +39,7 @@ const ItemTodo = ({ todo }: Iprops): JSX.Element => {
             content: val,
             completed: todo.completed
         }))
+        console.log('test2');
     }
     /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
     return (
