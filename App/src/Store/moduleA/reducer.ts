@@ -1,6 +1,6 @@
 import { check } from 'prettier';
 import * as types from './actionTypes';
-//liucunming
+//liucunming  v1.1
 const initialState: types.IState = {
     todoList: [],
 };
