@@ -1,9 +1,13 @@
 import { check } from 'prettier';
 import * as types from './actionTypes';
+//liucunming  v1.1
 const initialState: types.IState = {
     todoList: [],
 };
-export default (state: types.IState = initialState, action: types.MoudleAActionTypes): types.IState => {
+export default (
+    state: types.IState = initialState,
+    action: types.MoudleAActionTypes,
+): types.IState => {
     const { type, payload } = action;
     switch (type) {
         case types.ACTION_TYPE.ADD_TODO: {
@@ -24,9 +28,9 @@ export default (state: types.IState = initialState, action: types.MoudleAActionT
                 todoList: state.todoList.map((todo) => {
                     return todo.id === (payload as types.ITodo).id
                         ? {
-                            ...todo,
-                            completed: !todo.completed,
-                        }
+                              ...todo,
+                              completed: !todo.completed,
+                          }
                         : todo;
                 }),
             };
@@ -35,10 +39,10 @@ export default (state: types.IState = initialState, action: types.MoudleAActionT
         case types.ACTION_TYPE.REMOVE_TODO_SAGA: {
             const sagaRemove = {
                 ...state,
-                todoList: [...(payload as types.ITodo[])]
+                todoList: [...(payload as types.ITodo[])],
             };
             console.log('REMOVE_TODO_SAGA');
-            return sagaRemove
+            return sagaRemove;
         }
         case types.ACTION_TYPE.UPDATE_TODO: {
             const update = {
@@ -46,9 +50,9 @@ export default (state: types.IState = initialState, action: types.MoudleAActionT
                 todoList: state.todoList.map((todo) => {
                     return todo.id === (payload as types.ITodo).id
                         ? {
-                            ...todo,
-                            content: (payload as types.ITodo).content,
-                        }
+                              ...todo,
+                              content: (payload as types.ITodo).content,
+                          }
                         : todo;
                 }),
             };
